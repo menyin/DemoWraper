@@ -14,6 +14,9 @@
 ###   nginx配置server_name为*.upload.ccss，并且location为/upload 此时http://m.upload.ccss/upload访问，实际是访问http:192.168.1.246/  
 ### * 如何才能不影响动到原有业务项目配置（如www.597.com的配置），另外单独配置一个*.597.com/upload来使得所有业务项目都能有一个上传接口
 ###   否则就要增加一个业务项目就要在其server_name下配置一个值为/upload的location， 事实是也不会麻烦，就怕忘记。
+### ??在server_name =www.upload.ccss时,访问www.upload.ccss/upload 实际上就是访问192.168.1.246:8080/upload
+###   在server_name =*.upload.ccss时,访问www.upload.ccss/upload 实际上就是访问192.168.1.246:8080/
+
 
 ##部署过程：
 ### *csupload目录是前端测试项目，部署在一个tomcat,端口8081
