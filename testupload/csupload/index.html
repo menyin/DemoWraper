@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/jquery.csupload.css">
+    <script>function func(data) {
+        alert(data);
+    }</script>
+</head>
+
+<body>
+
+<input type="button" id="btn" value="按钮">
+
+<form id="uploadForm"  action="http://192.168.1.21:8080/upload/"
+      method="post"
+      enctype="multipart/form-data">
+    <input type="file" name="Filedata">
+</form>
+
+
+</body>
+
+<script src="https://cdn.597.com/js/jquery-1.8.3.min.js?v=2017"></script>
+<script src="js/jquery.form.js"></script>
+
+<script>
+    $(function () {
+        $('#btn').on('click',function () {
+            $("#uploadForm").ajaxSubmit({
+                type : "POST",
+                url : "/upload",
+                data: {act:'photo',timestamp:1543397119,fileSize:500},
+                contentType : false,
+                processData : false,
+                success : function(data) {
+                    debugger;
+                }
+            });
+
+        })
+    })
+
+</script>
+
+</html>
