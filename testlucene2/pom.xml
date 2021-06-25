@@ -17,7 +17,7 @@
     <maven.compiler.source>1.7</maven.compiler.source>
     <maven.compiler.target>1.7</maven.compiler.target>
     <lucene.version>3.0.2</lucene.version>
-    <beanutils>1.8.3</beanutils>
+    <beanutils>1.9.4</beanutils>
     <!--<ikanalyzer>2012_u6</ikanalyzer>-->
     <!--<ikanalyzer>3.2.8-stable</ikanalyzer>-->
     <ikanalyzer>3.2.0-stable</ikanalyzer>
